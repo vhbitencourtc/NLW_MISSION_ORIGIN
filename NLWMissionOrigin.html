@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OriginSix</title>
+
+    <!--ICONES-->
+    <link rel="stylesheet" href="assets/fonts/style.css" />
+
+    <!--SWIPER - CSS-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!--STYLES-ESTILOS-->
+    <link rel="stylesheet" href="NLWMissionOrigin.css" />
+
+    <!--FONTES IMPORTADAS DO GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--Deixando o HTML mais semântico, usando header, main e section-->
+    <!--id é um identificador único!-->
+    <header id="header">
+      <nav class="container">
+        <!--O Span serve para realizar um alinhamento, sem que o texto fique quebrado!-->
+        <a class="logo" href="#">Beauty<span>salon</span>.</a>
+        <div class="menu">
+          <!--Menu-->
+          <ul class="grid">
+            <!--<li> é um item de uma lista-->
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-close"></div>
+      </nav>
+    </header>
+    <!-- BOTÃO-HOME -->
+    <main>
+      <section class="section" id="home">
+        <!--Container é para auxiliar nas dimensões de moldura da página-->
+        <div class="container grid">
+          <div class="imagem">
+            <img
+              src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+              alt="Três mulheres com tesouras na mão e uma sorrindo."
+            />
+          </div>
+          <div class="text">
+            <h2 class="title">Saúde natural para os seus cabelos</h2>
+            <p>
+              Um salão exclusivo em São Paulo, especializado em tratamentos
+              naturais.
+            </p>
+            <a class="button" href="#">Agendar um horário</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+      <!-- BOTÃO-ABOUT -->
+      <section class="section" id="about">
+        <div class="container grid">
+          <div class="imagem">
+            <img
+              src="https://images.unsplash.com/photo-1562259920-47afc3030ba2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGhhaXJkcmVzc2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+              alt="Uma mulher sorrindo ao secar seus cabelos com secador no Salão"
+            />
+          </div>
+          <div class="text">
+            <div class="h2 title">Sobre Nós</div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
+              quas quam nisi iusto quidem doloribus nostrum, enim porro,
+              blanditiis sit assumenda impedit repellat placeat nesciunt
+              molestias sapiente sequi perferendis corporis.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A nemo
+              nostrum cum, distinctio nobis sunt quo ipsa iste pariatur fugit
+              sint alias soluta asperiores expedita quae voluptates odit
+              assumenda dolore?
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              ipsam dolores recusandae beatae debitis minima odio eius eos,
+              voluptates quos enim, nulla similique totam! Blanditiis nemo sed
+              voluptates ipsam nulla.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+      <!-- BOTÃO-SERVICES -->
+      <section class="section" id="services">
+        <div class="container grid">
+          <header>
+            <h2 class="title">Serviços</h2>
+            <p class="subtitle">
+              Com mais de 10 anos no mercado, o
+              <strong>Beautysalon.</strong> já conquistou clientes de inúmeros
+              países com seus tratamentos exclusivos e totalmente naturais
+            </p>
+          </header>
+          <div class="cards grid">
+            <div class="card">
+              <i class="icon-woman-hair"></i>
+              <h3 class="title">Terapia Capilar</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
+                praesentium cum nesciunt sed saepe iusto incidunt. Consequuntur
+                accusantium, laudantium vitae natus, neque optio totam
+                exercitationem nulla quae at, voluptas quam!
+              </p>
+            </div>
+            <div class="card">
+              <i class="icon-trim"></i>
+              <h3 class="title">Cortes</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                ipsum quae in, magni, aliquam ipsa assumenda iste quisquam
+                possimus dignissimos tenetur dicta odio commodi a, inventore
+                explicabo ipsam facere neque?
+              </p>
+            </div>
+            <div class="card">
+              <i class="icon-cosmetic"></i>
+              <h3 class="title">Tratamentos</h3>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+      <!-- BOTÃO-TESTIMONIALS -->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <header>
+            <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+          </header>
+          <!--Container + Container do Swiper-->
+          <div class="testimonials swiper-container">
+            <div class="swiper-wrapper">
+              <div class="testimonial swiper-slide">
+                <!-- Blockquote é uma caixa especial do HTML, que exibe algo que não é a pessoa que fala-->
+                <blockquote>
+                  <p>
+                    <!-- Aspas diferenciada, &ldquo;-->
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Recusandae consequuntur nobis at repellendus est dolorum
+                    consequatur aspernatur aliquam animi praesentium.
+                  </p>
+                  <!-- cite são citações no HTML-->
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/57.jpg"
+                      alt="Foto de Wanessa Silva"
+                    />
+                    Wanessa Silva
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Recusandae consequuntur nobis at repellendus est dolorum
+                    consequatur aspernatur aliquam animi praesentium.
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/70.jpg"
+                      alt="Foto de Lays Travassos"
+                    />
+                    Lays Travassos
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Recusandae consequuntur nobis at repellendus est dolorum
+                    consequatur aspernatur aliquam animi praesentium.
+                  </p>
+
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/44.jpg"
+                      alt="Foto de Tatá Hernandes"
+                    />
+                    Tatá Hernandes
+                  </cite>
+                </blockquote>
+              </div>
+            </div>
+            <!--Botões do SLIDE-NEXT & PREVIOUS-->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+
+      <!-- BOTÃO-CONTACT -->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato com a gente!</h2>
+            <p>
+              Entre em contato com a Beautysalon, queremos tirar suas dúvidas,
+              ouvir suas críticas e sugestões.
+            </p>
+            <a
+              href="https://api.whatsapp.com/send?phone=+5579998428101&text=Olá, tudo bem? Gostaria de fazer um pedido."
+              class="button"
+              target="_blank"
+            >
+              <!--_blak, é utilizado para abrir outra aba do navegador-->
+              <i class="icon-whatsapp"></i>Entre em contato</a
+            >
+          </div>
+
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i> 79 9 9842-8101</li>
+              <li><i class="icon-map-pin"></i> R. União, 646 - Me. Paulina, São Cristovão - SE</li>
+              <li><i class="icon-mail"></i> lojageekofthrones@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>      
+    </main>
+
+    <!--Rodapé da Página-->
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <!--Logo alt é a logomarca do rodapé-->
+          <a class="logo logo-alt" href="#home">beauty<span>salon</span>.</a>
+          <p>©2021 Loja Geek Of Thrones.</p>
+          <p>Todos os direitos reservados.</p>
+        </div>
+
+        <div class="social">
+          <a
+            href="https://www.instagram.com/lojageekofthrones/"
+            target="_blank"
+          >
+            <i class="icon-instagram"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/lojageekofthrones"
+            target="_blank"
+          >
+            <i class="icon-facebook"></i>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank">
+            <i class="icon-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#home" class="back-to-top"><i class="icon-arrow-up-circle"></i></a>
+
+    <!--SWIPER - JS-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--SCROLLREVEAL - JS-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="NLWMissionOrigin.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      })
+    </script>
+  </body>
+</html>

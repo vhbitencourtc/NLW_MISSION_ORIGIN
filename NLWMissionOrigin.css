@@ -1,0 +1,576 @@
+/*******RESET*******/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Nenhum UL terá ponto lateral */
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+/*******VARIAVEIS*******/
+:root {
+  /* Alinhamento padrão, basta chamar como variável */
+  --header-height: 4.5rem;
+  /** COLORS **/
+
+  /* Hue é responsável por  possibilitar a mudança de cores em nosso site de forma mais rápido */
+  --hue: 269;
+  /* HSL color mode */
+  /* O base color é a cor da quebra da logo com Span */
+  --base-color: hsl(var(--hue) 36% 57%);
+  /* O base color second é a cor do conteúdo invisível */
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  /* Cor do conteúdo dentro do botão */
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  /* Cor dos Titulos */
+  --title-color: hsl(var(--hue) 41% 10%);
+  /* Cor do texto do Body */
+  --text-color: hsl(0 0% 46%);
+  /* Cor do botão */
+  --text-color-light: hsl(0 0% 98%);
+  /* Cor do back do Body */
+  --body-color: hsl(0 0% 98%);
+
+  /*FONTS*/
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+}
+
+/*******BASE*******/
+
+/* Deixa a transição de páginas mais suave */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 400 1rem 'DM Sans', sans-serif;
+  color: var(--text-color);
+  background-color: var(--body-color);
+  /* Deixa a fonte mais minimalista, fina e suave */
+  -webkit-font-smoothing: antialiased;
+}
+/* Classe criada para reutilização do código de formatação de xt. */
+.title {
+  font: 700 1.875rem 'Poppins', sans-serif;
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
+}
+
+.button {
+  background-color: var(--base-color);
+  color: var(--text-color-light);
+  height: 3.5rem;
+  /* Inline define que as bordas do botão não ultrapasse o conteúdo */
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 500 1rem 'DM Sans', sans-serif;
+  /* Transition é um forma de suavisar a transição de cor assim que passar o mouse */
+  transition: background 0.3s;
+}
+/* Altera a cor do botão quando o mouse passa por cima */
+.button:hover {
+  background: var(--base-color-alt);
+}
+/* Divider é a quebra de página final, as informações são coletadas no PROJETO no FIGMA, mas não consegui então tive que digitar, rs */
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1),
+    hsla(var(--hue), 65%, 88%, 0.34)
+  );
+}
+
+.divider-2 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 65%, 88%, 0.34),
+    hsla(var(--hue), 36%, 57%, 1)
+  );
+}
+
+/*******LAYOUT*******/
+/* Redimensiona todo contéudo da classe Container */
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+/* GRID habilita possibilidades, e aplicar um espaçamento entre eles */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+/* Adiciona espaçamento entre as seções de conteúdo e bordas */
+.section {
+  padding: calc(5rem + var(--header-height)) 0;
+}
+
+.section .title {
+  margin-bottom: 1rem;
+}
+
+.section .subtitle {
+  font-size: var(--subtitle-font-size);
+}
+
+.section header {
+  margin-bottom: 4rem;
+}
+
+.section header strong {
+  color: var(--base-color);
+  cursor: pointer;
+}
+
+#header {
+  /* Border bottom coloca um borda minuscula em nossa caixa */
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
+  /* Adaptando o conteúdo do menu lateral ao alinhamento da página */
+  display: flex;
+  /* Deixando fixo a logo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--body-color);
+  width: 100%;
+}
+/* Assim que o scroll for acionado, irá alterar a cor e add um sombreamento */
+#header.scroll {
+  background-color: var(--base-color);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+}
+/* Assim que o scroll for acionado, irá alterar a cor da logo span */
+#header.scroll .logo span {
+  color: white;
+}
+
+/*******LOGO*******/
+.logo {
+  font: 700 1.31rem 'Poppins', sans-serif;
+  color: var(--title-color);
+}
+
+.logo span {
+  color: var(--base-color);
+}
+
+.logo-alt span {
+  color: var(--body-color);
+}
+
+/*******NAVEGAÇÃO*******/
+nav {
+  /* O rem é usado para deixar contéudo responsivo */
+  /* Espaçamento mais alinhado do texto */
+  height: var(--header-height);
+  display: flex;
+  /* Deixa os itens bem centralizados */
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav ul li {
+  text-align: center;
+}
+/* Ao passar o mouse no menu, irá mudar de cor mais suave */
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+}
+/* Ao passar o mouse no menu, irá mudar de cor */
+nav ul li a:hover {
+  color: var(--base-color);
+}
+/* Ao passar o mouse no menu, irá mudar de cor */
+nav ul li a:after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: var(--base-color);
+
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+  /* O transition fará a linha abaixo dos menus exibir de forma mais suave */
+  transition: width 0.9s;
+}
+/* Fusão do hover e after para exibir a linha em % */
+nav ul li a:hover:after {
+  width: 100%;
+}
+/* Oculta o Menu */
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+  /* Transição suave do menu */
+  top: -20rem;
+  transition: 0.2s;
+}
+
+nav .menu ul {
+  display: none;
+}
+
+/*.show é referente ao Menu para Mobile/Tablet */
+/* Exibi o Menu */
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+
+  background: var(--body-color);
+
+  height: 100vh;
+  width: 100vw;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Deixando o Menu centralizado e espaçado */
+  display: grid;
+  place-content: center;
+}
+
+nav.show .menu ul {
+  display: grid;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
+}
+/* Toggle Menu */
+.toggle {
+  color: var(--base-color);
+  font-size: 1.5rem;
+  /* Ao passar o mouse muda para mão do Mickey*/
+  cursor: pointer;
+}
+/* Interrrupitor do Menu */
+nav .icon-close {
+  visibility: hidden;
+  opacity: 0;
+
+  position: absolute;
+  top: -1.5rem;
+  right: 1.5rem;
+
+  transition: 0.2s;
+}
+
+nav.show div.icon-close {
+  visibility: visible;
+  opacity: 1;
+  top: 1.5rem;
+}
+
+/*******HOME - BOTÃO*******/
+#home {
+  /* Overflow faz ficar no limite do Container */
+  overflow: hidden;
+}
+/* Retira a margem e cola tudo na lateral */
+#home .container {
+  margin: 0;
+}
+/* Atribui a HOME Imagem como posição relativa para ajudar na utilização do BEFORE */
+#home .imagem {
+  position: relative;
+}
+/* Before cria um elemento fantasma antes da IMG */
+#home .imagem::before {
+  /* O content, conteúdo do objeto fantasma pode ser vazio ou com algo */
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--base-color-second);
+  position: absolute;
+  /* Deslocamento para o TOP do objeto fantasma */
+  top: -16.8%;
+  /* Deslocamento lateral do objeto fantasma */
+  left: 16.7%;
+  /* Z-index é um posicionamento de 3D */
+  z-index: 0;
+}
+/* Posicionamento Relativo da imagem da página */
+#home .imagem img {
+  position: relative;
+  right: 2.93rem;
+}
+/* Tanto o home IMG e BEFORE irão receber o arredondamento nas bordas */
+#home .imagem img,
+#home .imagem::before {
+  border-radius: 0.25rem;
+}
+/* Posiciona os textos da página */
+#home .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+#home .text h1 {
+  margin-bottom: 1rem;
+}
+/* Posiciona os paragráfos da página */
+#home .text p {
+  margin-bottom: 2rem;
+}
+
+/*******HOME - ABOUT*******/
+#about {
+  background: white;
+}
+
+#about .container {
+  margin: 0;
+}
+
+#about .imagem {
+  position: relative;
+}
+
+#about .imagem::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--base-color-second);
+
+  position: absolute;
+  top: -8.3%;
+  left: -33%;
+  z-index: 0;
+}
+
+#about .imagem img {
+  position: relative;
+}
+
+#about .imagem img,
+#about .imagem::before {
+  border-radius: 0.25rem;
+}
+
+#about .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/*******HOME - SERVICES*******/
+.cards.grid {
+  gap: 1.5rem;
+}
+/* Configuração dos CARD */
+.card {
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 0.25rem solid var(--base-color);
+  border-radius: 0.25rem 0.25rem 0 0;
+  text-align: center;
+}
+/* Configurando os ICONS */
+.card i {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+  color: var(--base-color);
+}
+
+.card .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/*******HOME - TESTIMONIALS*******/
+#testimonials {
+  background: white;
+}
+
+#testimonials .container {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#testimonials header {
+  margin-bottom: 0;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+#testimonials blockquote {
+  padding: 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0.25rem;
+}
+
+#testimonials blockquote p {
+  position: relative;
+  /* Dando espaço no ínicio da palavra */
+  text-indent: 1.875rem;
+  margin-bottom: 1.5rem;
+  color: var(--title-color);
+}
+
+#testimonials blockquote p span {
+  font: 700 3rem serif;
+  position: absolute;
+  top: -0.375rem;
+  left: -1.875rem;
+  color: var(--base-color);
+}
+
+#testimonials cite {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+}
+
+#testimonials cite img {
+  width: 2rem;
+  height: 2rem;
+  /* Esse objeto fixa a imagem*/
+  object-fit: cover;
+  /*Utiliza um clip para mascará a foto*/
+  clip-path: circle();
+  margin-right: 0.5rem;
+}
+
+/* SWIPER */
+.swiper-slide {
+  height: auto;
+  padding: 0rem 1 rem;
+}
+
+/*******HOME - CONTACT*******/
+
+#contact .grid {
+  gap: 4rem;
+}
+
+#contact .text p {
+  margin-bottom: 2rem;
+}
+
+#contact .button i,
+#contact ul li i {
+  margin-right: 0.625rem;
+  font-size: 1.5rem;
+}
+
+#contact ul.grid {
+  gap: 2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+}
+
+#contact ul li i {
+  color: var(--base-color);
+}
+
+/*******FOOTER - RODAPE*******/
+footer {
+  background: var(--base-color);
+}
+
+footer.section {
+  padding: 4rem 0;
+}
+/* Ajuste da margem e display da logo do Rodapé*/
+footer .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+/* Alterando a cor e margens dos textos do Rodapé*/
+footer .brand p {
+  color: var(--text-color-light);
+  margin-bottom: 0.75rem;
+}
+/* Alterando a fonte e cor dos Botões Sociais do Rodapé*/
+footer i {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+}
+/*Se os botões social forem com GRID, basta seguir essas etapas
+footer .social {
+  grid-auto-flow: column;
+  widht: fit-content*/
+
+/* Alinhamento dos Botões Sociais do Rodapé*/
+footer .social a {
+  margin-right: 2rem;
+  transition: 0.3s;
+  display: inline-block;
+}
+/**/
+footer .social a:hover {
+  transform: translateY(-12px);
+}
+
+/*******BACK-TO-TOP - VOLTAR PRO HOME*******/
+.back-to-top {
+  background: var(--base-color);
+  color: var(--text-color-light);
+
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  padding: 0.5rem;
+  clip-path: circle();
+
+  font-size: 1.5rem;
+  /*Retira qualquer linha que venha aparecer*/
+  line-height: 0;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Configurando o Responsivo*/
+/*** MEDIA QUARIES ***/
+/*Extra Large Devices: 1200 > */
+@media (min-width: 1200px) {
+  /* Cada 16px equivale a 1rem */
+  main {
+    /* Com a evolução do CSS é possivel atribuir ações de calculo dentro do código */
+    margin-top: calc(var--header-height);
+  }
+}
+/*Large Devices: 1023 > */
+/*Large Devices: 992 > */
+@media (min-width: 992px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+}
+/*Medium Devices: 767 > */ 
+
+

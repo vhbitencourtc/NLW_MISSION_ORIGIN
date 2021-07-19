@@ -44,6 +44,8 @@ img {
   /*FONTS*/
   --title-font-size: 1.875rem;
   --subtitle-font-size: 1rem;
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
 }
 
 /*******BASE*******/
@@ -54,7 +56,7 @@ html {
 }
 
 body {
-  font: 400 1rem 'DM Sans', sans-serif;
+  font: 400 1rem var(--body-font);
   color: var(--text-color);
   background-color: var(--body-color);
   /* Deixa a fonte mais minimalista, fina e suave */
@@ -62,7 +64,7 @@ body {
 }
 /* Classe criada para reutilização do código de formatação de xt. */
 .title {
-  font: 700 1.875rem 'Poppins', sans-serif;
+  font: 700 var(--title-font-size) var(--title-font);
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
@@ -76,7 +78,7 @@ body {
   align-items: center;
   padding: 0 2rem;
   border-radius: 0.25rem;
-  font: 500 1rem 'DM Sans', sans-serif;
+  font: 500 1rem var(--body-font);
   /* Transition é um forma de suavisar a transição de cor assim que passar o mouse */
   transition: background 0.3s;
 }
@@ -162,7 +164,7 @@ body {
 
 /*******LOGO*******/
 .logo {
-  font: 700 1.31rem 'Poppins', sans-serif;
+  font: 700 1.31rem var(--title-font);
   color: var(--title-color);
 }
 
@@ -553,14 +555,79 @@ footer .social a:hover {
   transform: translateY(0);
 }
 
-/*Configurando o Responsivo*/
+/*** RESPONSIVO ***/
 /*** MEDIA QUARIES ***/
 /*Extra Large Devices: 1200 > */
 @media (min-width: 1200px) {
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   /* Cada 16px equivale a 1rem */
+  .section {
+    padding: 10 rem 0;
+  }
+
+  .section header,
+  #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    padding: 3.25 rem;
+  }
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+  }
+  /*Ocultando o Menu Hamburguer*/
+  nav .icon-menu {
+    display: none;
+  }
+  /* Com a evolução do CSS é possivel atribuir ações de calculo dentro do código */
   main {
-    /* Com a evolução do CSS é possivel atribuir ações de calculo dentro do código */
-    margin-top: calc(var--header-height);
+    margin-top: var(--header-height);
+  }
+
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #home .imagem {
+    order: 1;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+  }
+
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /*Large Devices: 1023 > */
@@ -571,6 +638,4 @@ footer .social a:hover {
     --subtitle-font-size: 1.125rem;
   }
 }
-/*Medium Devices: 767 > */ 
-
-
+/*Medium Devices: 767 > */

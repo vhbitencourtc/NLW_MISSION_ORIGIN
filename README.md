@@ -1,5 +1,5 @@
 # <p align="center">:rocket: NLW - MISSION ORIGIN :rocket:</p>
-### <p align="center">Criando um Site Mobile/Desktop e Responsivo para vários dispositivos.</p>
+### <p align="center">Criando um Site Mobile/Desktop e Responsivo</p>
 ***
 #### <p align="center">:construction: Um `projeto básico` para quem está iniciando no Zero com `HTML, CSS e JS` :construction:</p>
 ---

@@ -18,15 +18,17 @@ Utilitários
 - [UnsPlash](https://unsplash.com/)
 - [IconFinder](https://www.iconfinder.com/)
 - [Bootstrap](https://getbootstrap.com.br/)
-- []()
-- []()
-- []()
-- []()
-- []()
+- [Codesand Box](https://codesandbox.io/s/)
+- [Codepen](https://codepen.io/pen/)
+- [IcoMoon](https://icomoon.io/app/#/select)
+- [Scroll Reveal JS](https://scrollrevealjs.org/guide/hello-world.html)
+- [DEV Docs](https://devdocs.io/)
 - 
 ## :computer:Projeto
-O projeto aplicado atráves de um dos desafios do Bootcamp HTML WEB Developer, cujo objetivo é desenvolver o famoso game da cobrinha.
-> Com mentoria da `Gabriela (SpruceGabriela)`
+O projeto é criar um site mobile/desktop e responsivo para vários dispositivos. 
+Um projeto básico para quem está iniciando no `Zero com HTML, CSS e JS`. 
+> Com mentoria do `Mayk Brito`.
+
 
 ## 📝Contribuições
 Feito e refeito de :heart: por `mim`, [Victor H Bitencourt C](https://github.com/vhbitencourtc/):alien:

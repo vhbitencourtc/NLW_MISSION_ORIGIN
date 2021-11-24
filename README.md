@@ -23,7 +23,6 @@ Utilitários
 - [IcoMoon](https://icomoon.io/app/#/select)
 - [Scroll Reveal JS](https://scrollrevealjs.org/guide/hello-world.html)
 - [DEV Docs](https://devdocs.io/)
-- 
 ## :computer:Projeto
 O projeto é criar um site mobile/desktop e responsivo para vários dispositivos. 
 Um projeto básico para quem está iniciando no `Zero com HTML, CSS e JS`. 
